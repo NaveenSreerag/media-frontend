@@ -1,0 +1,63 @@
+.showBox{
+ position: fixed;
+ top: 0;
+ left: 0;
+ background: #0008;
+ width: 100%;
+ height: 100vh;
+ z-index: 4;
+}
+.showBox .showFollowBox{
+    width: 350px;
+    height: 350px;
+    border: 1px solid gray;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+transform: translate(-40% -30%);
+overflow: auto;
+}
+.showBox .showFollowBox .userInfo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+color: gray;
+font-size: 14px;
+gap: 10px;
+margin-bottom: 1rem;
+}
+.showBox .showFollowBox .userInfo a img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.showBox .showFollowBox .heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+.showBox .showFollowBox hr{
+    margin: 8px 0px;
+    line-height: 0;
+}
+.showBox .showFollowBox h6{
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: normal;
+    
+
+}
+.showBox .showFollowBox  button{
+    border: none;
+    color: white;
+    background-color: blueviolet;
+    padding: 5px 17px;
+    cursor: pointer;
+    border-radius: 20px;
+    letter-spacing: 1.5px;
+   
+}

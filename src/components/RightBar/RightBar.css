@@ -1,0 +1,103 @@
+.rightBar {
+  flex: 3;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.rightBar .container {
+  padding: 20px;
+}
+.rightBar .container .item {
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.rightBar .container .item span {
+  color: grey;
+  font-size: 12px;
+}
+.rightBar .container .item .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 22px 0px;
+}
+
+.rightBar .container .item .user .userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.rightBar .container .item .user .userInfo a{
+  display: flex;
+  align-items: center;
+text-decoration: none;
+color: gray;
+font-size: 14px;
+gap: 10px;
+
+
+
+}
+.rightBar .container .item .user .userInfo p{
+    color: gray;
+    font-size: 14px;
+}
+
+.rightBar .container .item .user .userInfo img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.rightBar .container .item .user .userInfo .online-icon{
+  width: 12px;
+  height: 12px;
+  background-color: lime;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  right: 33px;
+  
+}
+.rightBar .container .item .user .userInfo span {
+  font-weight: 500;
+  color: black;
+}
+.rightBar .container .item .user .buttons {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.rightBar .container .item .user .buttons button {
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+  border: none;
+}
+.rightBar .container .item .user .buttons button:first-child {
+  background-color: #5271ff;
+}
+.rightBar .container .item .user .buttons button:last-child {
+  background-color: #f0544f;
+}
+
+
+@media (max-width: 480px) {
+  .rightBar {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .rightBar {
+    display: none;
+  }
+}

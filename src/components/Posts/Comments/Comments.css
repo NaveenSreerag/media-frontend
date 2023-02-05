@@ -1,0 +1,92 @@
+.comments .comment img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.comments .comment {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  
+}
+.comments .comment:hover .more-vert {
+opacity: 1;
+}
+.comments .comment  .more-vert{
+  opacity: 0;
+}
+.comments .comment .info textarea{
+  padding: 5px 5px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+}
+
+.comments .comment .info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+  /* background-color: gainsboro;
+  padding: 5px 10px;
+  border-radius: 8px; */
+}
+.comments .comment .info span {
+  font-weight: 500;
+  color: black;
+}
+.comments .comment .info p {
+  color: gray;
+  font-size: 14px;
+}
+.comments .comment .date {
+  flex: 1;
+  font-size: 13px;
+  color: gray;
+  align-self: center;
+  
+}
+.side-comment{
+  padding: 10px 0;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+.comments .comment .info .side-comment span{
+  font-size: 13px;
+  color: gray;
+  cursor: pointer;
+}
+.write img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.write {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+  gap: 20px;
+}
+.write input {
+  flex: 5;
+  padding: 10px;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+.write button {
+  padding: 5px 15px;
+  color: white;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 4px;
+}
