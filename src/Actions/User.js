@@ -9,7 +9,7 @@ export const loginUser = (email, password) => async (dispatch) => {
     });
 
     const { data } = await axios.post(
-      "https://notebook-socialmedia-api.onrender.com/api/v1/login",
+      "/api/v1/login",
       { email, password },
       {
         headers: {
@@ -40,7 +40,7 @@ export const loadUser = ()=> async (dispatch)=>{
       type:"LoadUserRequest"
     })
 
-    const {data} = await axios.get("https://notebook-socialmedia-api.onrender.com/api/v1/me");
+    const {data} = await axios.get("/api/v1/me");
 
     dispatch({
       type:"LoadUserSuccess",
@@ -62,7 +62,7 @@ export const registerUser = (fullname,email,password,username,gender) => async (
       type:"RegisterRequest"
     })
      
-    const {data} = await axios.post("https://notebook-socialmedia-api.onrender.com/api/v1/register",
+    const {data} = await axios.post("/api/v1/register",
      {fullname,email,password,username,gender}
      )
 
@@ -89,7 +89,7 @@ export const getallusers = (username="")=> async(dispatch)=>{
       type:"GetAllUsersRequest"
     })
 
-    const {data} = await axios.get(`https://notebook-socialmedia-api.onrender.com/api/v1/users?username=${username}`)
+    const {data} = await axios.get(`/api/v1/users?username=${username}`)
 
     dispatch({
       type:"GetAllUsersSuccess",
@@ -110,7 +110,7 @@ export const getUser = (id)=> async(dispatch)=>{
       type:"GetUserRequest"
     })
 
-    const {data} = await axios.get(`https://notebook-socialmedia-api.onrender.com/api/v1/profile/user/${id}`)
+    const {data} = await axios.get(`/api/v1/profile/user/${id}`)
 
     dispatch({
       type:"GetUserSuccess",
@@ -130,7 +130,7 @@ export const getUserPosts = (id)=> async(dispatch)=>{
       type:"GetUserPostRequest"
     })
 
-    const {data} = await axios.get(`https://notebook-socialmedia-api.onrender.com/api/v1/profile/user/${id}/posts`)
+    const {data} = await axios.get(`/api/v1/profile/user/${id}/posts`)
 
     dispatch({
       type:"GetUserPostSuccess",
@@ -153,7 +153,7 @@ address,story,website,place)=> async(dispatch)=>{
       type:"UpdateUserRequest"
     })
 
-    const {data}= await axios.put("https://notebook-socialmedia-api.onrender.com/api/v1/update/profile/me",{
+    const {data}= await axios.put("/api/v1/update/profile/me",{
       fullname,
             username,
             email,
@@ -186,7 +186,7 @@ export const followAndUnfollow = (id)=> async(dispatch)=>{
       type:"followUserRequest"
     })
 
-    const {data} = await axios.get(`https://notebook-socialmedia-api.onrender.com/api/v1/${id}/follow`)
+    const {data} = await axios.get(`/api/v1/${id}/follow`)
 
     dispatch({
       type:"followUserSuccess",
