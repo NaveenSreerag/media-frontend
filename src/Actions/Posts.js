@@ -8,7 +8,7 @@ export const getfollowingPosts = () => async (dispatch) => {
       type: "postFollowingRequest",
     });
 
-    const { data } = await axios.get("/api/v1/post/all");
+    const { data } = await axios.get("https://notebook-socialmedia-api.onrender.com/api/v1/post/all");
 
     dispatch({
       type: "postFollowingSuccess",
@@ -28,7 +28,7 @@ export const addNewPost = (caption, image) => async (dispatch) => {
       type: "addNewPostRequest",
     });
 
-    const { data } = await axios.post("/api/v1/post/create", {
+    const { data } = await axios.post("https://notebook-socialmedia-api.onrender.com/api/v1/post/create", {
       caption,
       image,
     });
@@ -54,7 +54,7 @@ export const likeAndUnlikePost = (id) => async (dispatch) => {
       type: "likeRequest",
     });
 
-    const { data } = await axios.get(`/api/v1/post/likeandunlike/${id}`);
+    const { data } = await axios.get(`https://notebook-socialmedia-api.onrender.com/api/v1/post/likeandunlike/${id}`);
 
     dispatch({
       type: "likeSuccess",
@@ -74,7 +74,7 @@ export const updatePost = (caption, id) => async (dispatch) => {
       type: "updatePostRequest",
     });
 
-    const { data } = await axios.put(`/api/v1/post/update/${id}`, { caption });
+    const { data } = await axios.put(`https://notebook-socialmedia-api.onrender.com/api/v1/post/update/${id}`, { caption });
 
     dispatch({
       type: "updatePostSuccess",
@@ -99,7 +99,7 @@ export const createComment =( post,comment,user ) => async (dispatch) => {
 
      
 
-      const { data } = await axios.post(`/api/v1/create/comment/${post._id}`, { comment,user:user._id,post:post._id });
+      const { data } = await axios.post(`https://notebook-socialmedia-api.onrender.com/api/v1/create/comment/${post._id}`, { comment,user:user._id,post:post._id });
 
       dispatch({
         type: "createCommentSuccess",
@@ -121,7 +121,7 @@ export const createComment =( post,comment,user ) => async (dispatch) => {
         type:"updateCommentRequest"
       })
 
-      const {data}= await axios.post(`/api/v1/update/comment/${comment._id}`,{
+      const {data}= await axios.post(`https://notebook-socialmedia-api.onrender.com/api/v1/update/comment/${comment._id}`,{
         comment:content
       })
 
